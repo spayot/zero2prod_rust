@@ -1,0 +1,9 @@
+application:
+  host: 0.0.0.0
+  base_url: "https://newsletter.sylvain.payot."
+
+database:
+  require_ssl: true
+
+email_client:
+  base_url: "https://api.postmarkapp.com"

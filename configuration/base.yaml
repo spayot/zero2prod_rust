@@ -1,0 +1,19 @@
+application: 
+  port: 8000
+  hmac_secret: "long-random-key-that-must-be-at-least-combined-key-length--characters"
+
+database:
+  host: "127.0.0.1"
+  port: 5432
+  username: "postgres"
+  password: "password"
+  database_name: "newsletter"
+
+email_client:
+  base_url: "localhost"
+  sender_email: "sylvain.payot@insead.edu"
+  authorization_token: "my-secret-token"
+  timeout_milliseconds: 10000
+
+
+redis_uri: "redis://127.0.0.1:6379"

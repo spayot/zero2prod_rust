@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>Publish Newsletter</title>
+    </head>
+    <body>
+        {msg_html}
+        <form action="/admin/newsletters" method="post">
+            <label>Title:<br>
+                <input
+                    type="text"
+                    placeholder="Enter the Newsletter Title"
+                    name="title"
+                >
+            </label>
+            <br>
+            <label>HTML Content:<br>
+                <textarea
+                    placeholder="Enter the content in HTML format"
+                    name="content_html"
+                    rows="20"
+                    cols="50"
+                ></textarea>
+            </label>
+            <br>
+            <label>Text Content:<br>
+                <textarea
+                    placeholder="Enter the content in text format"
+                    name="content_text"
+                    rows="20"
+                    cols="50"
+            ></textarea>
+            </label>
+            <br>
+            <input hidden type="text" name="idempotency_key" value="{idempotency_key}">"
+            <button type="submit">Publish</button>
+        </form>
+        <p><a href="/admin/dashboard">&lt;- Back</a></p>
+    </body>
+</html>
